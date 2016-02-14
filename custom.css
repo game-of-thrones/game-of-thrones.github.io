@@ -1,0 +1,121 @@
+/* css given in html file */
+
+  .mybox {
+    
+    height: 700px;
+    opacity: 1.0;  
+    z-index: 5;
+    font-size: 200%;
+    color: #ff700e;
+  }
+
+  .mybox .bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;      
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(black.png);
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .thumbnail{
+    width:65px;
+  }
+  #comments{
+    overflow-y: scroll;
+  }
+
+  #comments::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+  }
+
+  #comments::-webkit-scrollbar{
+    width: 10px;
+    background-color: #F5F5F5;
+  }
+
+  #comments::-webkit-scrollbar-thumb{
+    background-color: #F90; 
+    background-image: -webkit-linear-gradient(45deg,
+                                              rgba(255, 255, 255, .2) 25%,
+                                              transparent 25%,
+                                              transparent 50%,
+                                              rgba(255, 255, 255, .2) 50%,
+                                              rgba(255, 255, 255, .2) 75%,
+                                              transparent 75%,
+                                              transparent)
+  }
+
+
+
+/* css modified */
+
+  .tab-content{
+
+    /* initial style*/
+  
+    
+    
+
+    /* changed style */
+    
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  .head{
+    height: 75px;
+    background-color: black;
+    opacity: 0.5;
+    margin-bottom: 100px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    
+  }
+
+  .tab-wrapper{
+
+  }
+
+  .question-section{
+    position: relative;
+    height: 70%;
+    width: 100%;
+    padding: 10px 30px;
+    padding-top: 50px;
+
+  }
+
+  .answer-section{
+    position: relative;
+    height: 25%;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    padding: 20px;
+    padding-top: 60px;
+    background-color: black;
+    opacity: 0.5;
+  }
+
+
+  .ans-in{
+    vertical-align: middle;
+    color: black;
+  }
+
+
+  .ques-img{
+    padding-bottom: 20px;
+  }

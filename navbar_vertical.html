@@ -1,178 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Game of Thrones</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"> 
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <style type="text/css">
-    .mybox {
-        width: 1050px;
-    height: 510px;
-    opacity: 1.0;
-    
-   z-index: 5;
-   font-size: 200%;
-    }
+  <head>
+      <meta charset="utf-8">
+      <title>Game of Thrones</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- bootstrap css & js -->
+      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"> 
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
-    .mybox .bg{
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-image: url(black.png);
-      opacity: 0.5;
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-    }
-    .thumbnail{
-      width:65px;
-    }
-    #comments
-{
-  overflow-y: scroll;
-}
+      <!-- custom css files -->
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="custom.css">
+  </head>
+  <body>
+    <div id="wrapper" class="active"> 
 
-#comments::-webkit-scrollbar-track
-{
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #F5F5F5;
-}
+      <!-- side bar menu STARTS --> 
+      <div id="sidebar-wrapper">
+        <ul id="sidebar_menu" class="sidebar-nav">
+         <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+        </ul>
+        <ul class="sidebar-nav nav-pills" id="sidebar">
+          <li class="active"><a data-toggle="pill" href="#ques">question<span class="sub_icon glyphicon glyphicon-pencil"></span></a></li>
+          <li><a data-toggle="pill" href="#clues">clues<span class="sub_icon glyphicon glyphicon-exclamation-sign"></span></a></li>
+          <li><a data-toggle="pill" href="#scores">scores<span class="sub_icon glyphicon glyphicon-tower"></span></a></li>
+          <li><a data-toggle="pill" href="#comments">comments<span class="sub_icon glyphicon glyphicon-comment"></span></a></li>
+          <li><a>logout<span class="sub_icon glyphicon glyphicon-off"></span></a></li>
+        </ul>
+            
+      </div>
+      <!-- side bar menu ENDS --> 
 
-#comments::-webkit-scrollbar
-{
-  width: 10px;
-  background-color: #F5F5F5;
-}
-
-#comments::-webkit-scrollbar-thumb
-{
-  background-color: #F90; 
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
-                        transparent 25%,
-                        transparent 50%,
-                        rgba(255, 255, 255, .2) 50%,
-                        rgba(255, 255, 255, .2) 75%,
-                        transparent 75%,
-                        transparent)
-}
-
-    </style>
-</head>
-<body>
-<div id="wrapper" class="active">  
-  <div id="sidebar-wrapper">
-    <ul id="sidebar_menu" class="sidebar-nav">
-     <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
-    </ul>
-    <ul class="sidebar-nav nav-pills" id="sidebar">
-      <li class="active"><a data-toggle="pill" href="#ques">question<span class="sub_icon glyphicon glyphicon-pencil"></span></a></li>
-      <li><a data-toggle="pill" href="#clues">clues<span class="sub_icon glyphicon glyphicon-exclamation-sign"></span></a></li>
-      <li><a data-toggle="pill" href="#scores">scores<span class="sub_icon glyphicon glyphicon-tower"></span></a></li>
-      <li><a data-toggle="pill" href="#comments">comments<span class="sub_icon glyphicon glyphicon-comment"></span></a></li>
-      <li><a>logout<span class="sub_icon glyphicon glyphicon-off"></span></a></li>
-    </ul>
-        
-  </div>
-
-  <div class="tab-content" style="position: absolute;left: 185px;top: 110px;">
-    <div id="ques" class="tab-pane fade in active">
-    <div class="mybox" align="center">
-    <div class="bg"></div>
-    
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    
-    </div>
-    </div>
-    <div id="clues" class="tab-pane fade">
-    <div class="mybox">
-    <div class="bg"></div>
-  
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    
-    </div>
-    </div>
-    <div id="scores" class="tab-pane fade">
-    <div class="mybox">
-    <div class="bg"></div>
-        <div class="col-md-3" >
-        <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle">
+      <div class="container-fluid">
+        <!-- heading STARTS -->
+        <div class="col-lg-12 col-md-12 head">
+            <h1>Game of Thrones</h1>
         </div>
-        
-        <div class="col-md-9">
-            <h3>User Name</h3>
-            <h6>Email: MyEmail@servidor.com</h6>
-            <h6>Ubication: Colombia</h6>
-            <h6>Old: 1 Year</h6>
+        <!-- heading ENDS -->
+
+        <div class="tab-wrapper col-md-12 col-lg-12">
+        <div class="tab-content">
+          <div id="ques" class="tab-pane fade in active">
+            <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 mybox" align="center">
+              <div class="bg"></div>
+              <div class="question-section">
+                <img class="ques-img col-lg-4 col-md-4" src="http://placehold.it/350x350"/>
+                <img class="ques-img col-lg-4 col-md-4" src="http://placehold.it/350x350"/>
+                <img class="ques-img col-lg-4 col-md-4" src="http://placehold.it/350x350"/>
+              </div>
+
+              <div class="answer-section">
+                <form class="ans-in">
+                  <input type="text" class="form-control">
+                  <input type="sumbit" value="Submit" class="btn btn-primary">
+                </form>
+
+              </div>
+            
+            </div>
+          </div>
+          <div id="clues" class="tab-pane fade">
+            <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 mybox">
+            <div class="bg"></div>
+          
+              <h3>Menu 1</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+            </div>
+          </div>
+          <div id="scores" class="tab-pane fade">
+            <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 mybox">
+                <div class="bg"></div>
+                <div class="col-md-3" >
+                  <img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="img-circle">
+                </div>
+                
+                <div class="col-md-9">
+                    <h3>User Name</h3>
+                    <h6>Email: MyEmail@servidor.com</h6>
+                    <h6>Ubication: Colombia</h6>
+                    <h6>Old: 1 Year</h6>
+                </div>
+
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>Mary</td>
+                        <td>Moe</td>
+                        <td>mary@example.com</td>
+                      </tr>
+                      <tr>
+                        <td>July</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                      </tr>
+                    </tbody>
+                </table>
+          </div>
+
+
         </div>
+        <div id="comments" class="tab-pane fade">
+          <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 mybox">
+            <div class="bg"></div>
+            <div class="col-md-12">
+              <h3>Comment</h3>
+            </div>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in iaculis felis. Nam tincidunt dignissim lectus at ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis cursus lacinia lorem, eget interdum neque. Maecenas commodo feugiat placerat. Fusce finibus ligula enim, id ultricies libero vulputate at. Mauris vel mi cursus nisl consequat viverra. Donec eleifend dolor sed felis blandit malesuada. Ut risus nulla, commodo non interdum vel, luctus eget sapien. Nulla porta, diam eu vestibulum scelerisque, nibh sapien porttitor est, eu vulputate ipsum velit et enim. Fusce tristique ligula tortor, ac blandit purus posuere eget. Quisque bibendum, purus vel rhoncus pulvinar, quam odio porttitor lacus, quis porta elit ante ac nunc. In a nulla in lorem hendrerit elementum vel non libero. Donec ut nisi vel neque cursus blandit. Vivamus faucibus odio orci, at blandit ante finibus malesuada. Fusce id tincidunt mauris.
 
-<table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
+            Integer nec lorem pulvinar, tempor mi non, placerat mi. Etiam maximus augue sed enim sagittis tristique. Integer imperdiet augue fermentum mi blandit, sit amet condimentum arcu imperdiet. Integer cursus dui quis ex pulvinar pretium. Quisque eget odio in est fringilla commodo vel ac ipsum. In congue ex non nunc tristique, id pretium sapien faucibus. Etiam et tempor odio. Pellentesque aliquam orci eros, non ullamcorper odio tincidunt porta. Duis vel massa porta, molestie neque eu, aliquet sem. Sed ut turpis odio. Nam in tellus ut augue sollicitudin cursus a commodo sem. Donec elementum lacus sed augue vehicula ultricies. Cras egestas nisi et vehicula ornare. Ut egestas ultricies dolor at semper. Aliquam nec tortor dapibus neque efficitur vestibulum. Sed elementum scelerisque ligula, id faucibus urna.
 
+            Nunc tincidunt, ante id bibendum porta, elit quam semper neque, fringilla imperdiet tortor sapien ut neque. Quisque varius magna ut neque volutpat finibus. Nulla eu tellus eget purus aliquet ultrices. Quisque tincidunt vitae augue vitae posuere. Curabitur maximus viverra massa, ac posuere mauris rhoncus ut. Nam imperdiet nulla justo, in placerat mauris aliquet eget. Aenean fermentum finibus sem, a dapibus mauris porta vel. Maecenas facilisis leo facilisis sapien cursus, id ultricies justo laoreet. Ut mi quam, imperdiet non dolor at, sagittis sodales quam. Maecenas tincidunt nisi nisi, ac lacinia metus porta eget. Fusce vel lorem congue, venenatis tellus at, dignissim tellus. Aenean ornare id diam sit amet ornare. Nunc ultricies dui ac lacus dictum auctor. Nulla sed ullamcorper augue. Aenean condimentum tellus non ante auctor fermentum.
 
-</div>
-    <div id="comments" class="tab-pane fade">
-    <div class="mybox">
-    <div class="bg"></div>
-<div class="col-md-12">
-<h3>Comment</h3>
-</div>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in iaculis felis. Nam tincidunt dignissim lectus at ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis cursus lacinia lorem, eget interdum neque. Maecenas commodo feugiat placerat. Fusce finibus ligula enim, id ultricies libero vulputate at. Mauris vel mi cursus nisl consequat viverra. Donec eleifend dolor sed felis blandit malesuada. Ut risus nulla, commodo non interdum vel, luctus eget sapien. Nulla porta, diam eu vestibulum scelerisque, nibh sapien porttitor est, eu vulputate ipsum velit et enim. Fusce tristique ligula tortor, ac blandit purus posuere eget. Quisque bibendum, purus vel rhoncus pulvinar, quam odio porttitor lacus, quis porta elit ante ac nunc. In a nulla in lorem hendrerit elementum vel non libero. Donec ut nisi vel neque cursus blandit. Vivamus faucibus odio orci, at blandit ante finibus malesuada. Fusce id tincidunt mauris.
+            Aenean quis est faucibus, fringilla orci a, imperdiet sapien. In sollicitudin magna quam. Ut efficitur porttitor fringilla. Aenean non rutrum justo, et eleifend magna. Morbi sagittis consequat ipsum, ac accumsan risus dictum vitae. Duis blandit gravida enim. Ut purus magna, consequat et pulvinar finibus, fringilla sed lectus. Phasellus ultrices ipsum at mi pretium convallis. Cras id felis a odio ornare iaculis. In quis porta dolor.
 
-Integer nec lorem pulvinar, tempor mi non, placerat mi. Etiam maximus augue sed enim sagittis tristique. Integer imperdiet augue fermentum mi blandit, sit amet condimentum arcu imperdiet. Integer cursus dui quis ex pulvinar pretium. Quisque eget odio in est fringilla commodo vel ac ipsum. In congue ex non nunc tristique, id pretium sapien faucibus. Etiam et tempor odio. Pellentesque aliquam orci eros, non ullamcorper odio tincidunt porta. Duis vel massa porta, molestie neque eu, aliquet sem. Sed ut turpis odio. Nam in tellus ut augue sollicitudin cursus a commodo sem. Donec elementum lacus sed augue vehicula ultricies. Cras egestas nisi et vehicula ornare. Ut egestas ultricies dolor at semper. Aliquam nec tortor dapibus neque efficitur vestibulum. Sed elementum scelerisque ligula, id faucibus urna.
+            Aliquam et vehicula turpis. Integer placerat ornare volutpat. Phasellus viverra viverra enim, et commodo libero feugiat ut. Pellentesque consectetur viverra erat, et mollis arcu eleifend aliquet. Vivamus at accumsan velit, non lobortis sapien. Duis viverra orci dui, ut vulputate sem blandit nec. Nunc congue imperdiet nisl, eu lacinia mi egestas quis. Etiam finibus pharetra elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam auctor suscipit quam non aliquet. Donec pretium ante a nibh consequat, sit amet auctor tortor feugiat. Nunc mattis nunc quam, sed aliquet libero lacinia et. Quisque faucibus maximus pellentesque. Aliquam tristique enim sem, ut sagittis leo auctor a. Duis rutrum convallis sapien quis aliquet.</p>
 
-Nunc tincidunt, ante id bibendum porta, elit quam semper neque, fringilla imperdiet tortor sapien ut neque. Quisque varius magna ut neque volutpat finibus. Nulla eu tellus eget purus aliquet ultrices. Quisque tincidunt vitae augue vitae posuere. Curabitur maximus viverra massa, ac posuere mauris rhoncus ut. Nam imperdiet nulla justo, in placerat mauris aliquet eget. Aenean fermentum finibus sem, a dapibus mauris porta vel. Maecenas facilisis leo facilisis sapien cursus, id ultricies justo laoreet. Ut mi quam, imperdiet non dolor at, sagittis sodales quam. Maecenas tincidunt nisi nisi, ac lacinia metus porta eget. Fusce vel lorem congue, venenatis tellus at, dignissim tellus. Aenean ornare id diam sit amet ornare. Nunc ultricies dui ac lacus dictum auctor. Nulla sed ullamcorper augue. Aenean condimentum tellus non ante auctor fermentum.
-
-Aenean quis est faucibus, fringilla orci a, imperdiet sapien. In sollicitudin magna quam. Ut efficitur porttitor fringilla. Aenean non rutrum justo, et eleifend magna. Morbi sagittis consequat ipsum, ac accumsan risus dictum vitae. Duis blandit gravida enim. Ut purus magna, consequat et pulvinar finibus, fringilla sed lectus. Phasellus ultrices ipsum at mi pretium convallis. Cras id felis a odio ornare iaculis. In quis porta dolor.
-
-Aliquam et vehicula turpis. Integer placerat ornare volutpat. Phasellus viverra viverra enim, et commodo libero feugiat ut. Pellentesque consectetur viverra erat, et mollis arcu eleifend aliquet. Vivamus at accumsan velit, non lobortis sapien. Duis viverra orci dui, ut vulputate sem blandit nec. Nunc congue imperdiet nisl, eu lacinia mi egestas quis. Etiam finibus pharetra elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam auctor suscipit quam non aliquet. Donec pretium ante a nibh consequat, sit amet auctor tortor feugiat. Nunc mattis nunc quam, sed aliquet libero lacinia et. Quisque faucibus maximus pellentesque. Aliquam tristique enim sem, ut sagittis leo auctor a. Duis rutrum convallis sapien quis aliquet.</p>
-
+          </div>
+          </div>
+        </div>
+        </div>
+                 
+          
+      </div>
     </div>
-    </div>
-  </div>
-           
-    
-</div>
-<script type="text/javascript">
-$("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("active");
-});
-</script>
-</body>
+    <script type="text/javascript">
+    $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("active");
+    });
+
+    </script>
+  </body>
 </html>
